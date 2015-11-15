@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"li",
+				"little_one_colors"
+			],
+			[
 				"mi-",
 				"min-width"
 			],
@@ -215,31 +219,34 @@
 			"file": "WriteScheme.hs",
 			"settings":
 			{
-				"buffer_size": 676,
+				"buffer_size": 998,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/fergusbarratt/.gitignore_global",
+			"contents": "GHCi, version 7.10.2: http://www.haskell.org/ghc/  :? for help\nPrelude> cons\n\n<interactive>:2:1:\n    Not in scope: ‘cons’\n    Perhaps you meant one of these:\n      ‘const’ (imported from Prelude), ‘cos’ (imported from Prelude)\nPrelude> cons\n\n<interactive>:3:1:\n    Not in scope: ‘cons’\n    Perhaps you meant one of these:\n      ‘const’ (imported from Prelude), ‘cos’ (imported from Prelude)\nPrelude> cos\n\n<interactive>:4:1:\n    No instance for (Show (a0 -> a0))\n      (maybe you haven't applied enough arguments to a function?)\n      arising from a use of ‘print’\n    In the first argument of ‘print’, namely ‘it’\n    In a stmt of an interactive GHCi command: print it\nPrelude> cos(5)\n0.2836621854632263\nPrelude> clear\n\n<interactive>:6:1: Not in scope: ‘clear’\nPrelude> cons 'a'\n\n<interactive>:7:1:\n    Not in scope: ‘cons’\n    Perhaps you meant one of these:\n      ‘const’ (imported from Prelude), ‘cos’ (imported from Prelude)\nPrelude> a:a\n\n<interactive>:8:1: Not in scope: ‘a’\n\n<interactive>:8:3: Not in scope: ‘a’\nPrelude> 'a':'a'\n\n<interactive>:9:5:\n    Couldn't match expected type ‘[Char]’ with actual type ‘Char’\n    In the second argument of ‘(:)’, namely ‘'a'’\n    In the expression: 'a' : 'a'\n    In an equation for ‘it’: it = 'a' : 'a'\nPrelude> 'actual':'a'\n\n<interactive>:10:1:\n    Syntax error on 'actual'\n    Perhaps you intended to use TemplateHaskell\n    In the Template Haskell quotation 'actual'\nPrelude> \"actual\":'a'\n\n<interactive>:11:10:\n    Couldn't match expected type ‘[[Char]]’ with actual type ‘Char’\n    In the second argument of ‘(:)’, namely ‘'a'’\n    In the expression: \"actual\" : 'a'\n    In an equation for ‘it’: it = \"actual\" : 'a'\nPrelude> \"actual\":\"a\"\n\n<interactive>:12:10:\n    Couldn't match type ‘Char’ with ‘[Char]’\n    Expected type: [[Char]]\n      Actual type: [Char]\n    In the second argument of ‘(:)’, namely ‘\"a\"’\n    In the expression: \"actual\" : \"a\"\n    In an equation for ‘it’: it = \"actual\" : \"a\"\nPrelude> \"a\":\"a\"\n\n<interactive>:13:5:\n    Couldn't match type ‘Char’ with ‘[Char]’\n    Expected type: [[Char]]\n      Actual type: [Char]\n    In the second argument of ‘(:)’, namely ‘\"a\"’\n    In the expression: \"a\" : \"a\"\n    In an equation for ‘it’: it = \"a\" : \"a\"\nPrelude> \"a\":'a'\n\n<interactive>:14:5:\n    Couldn't match expected type ‘[[Char]]’ with actual type ‘Char’\n    In the second argument of ‘(:)’, namely ‘'a'’\n    In the expression: \"a\" : 'a'\n    In an equation for ‘it’: it = \"a\" : 'a'\nPrelude> \"a\":a\n\n<interactive>:15:5: Not in scope: ‘a’\nPrelude> \"a\":1\n\n<interactive>:16:5:\n    No instance for (Num [[Char]]) arising from the literal ‘1’\n    In the second argument of ‘(:)’, namely ‘1’\n    In the expression: \"a\" : 1\n    In an equation for ‘it’: it = \"a\" : 1\nPrelude> a = 'a'\nPrelude> 'a':a\n\n<interactive>:18:5:\n    Couldn't match expected type ‘[Char]’ with actual type ‘Char’\n    In the second argument of ‘(:)’, namely ‘a’\n    In the expression: 'a' : a\nPrelude> 'a':'a'\n\n<interactive>:19:5:\n    Couldn't match expected type ‘[Char]’ with actual type ‘Char’\n    In the second argument of ‘(:)’, namely ‘'a'’\n    In the expression: 'a' : 'a'\n    In an equation for ‘it’: it = 'a' : 'a'\nPrelude> a:[a]\n\"aa\"\nPrelude> a\n'a'\nPrelude> a:\"a\"\n\"aa\"\nPrelude> \"a\":\"a\"\n\n<interactive>:23:5:\n    Couldn't match type ‘Char’ with ‘[Char]’\n    Expected type: [[Char]]\n      Actual type: [Char]\n    In the second argument of ‘(:)’, namely ‘\"a\"’\n    In the expression: \"a\" : \"a\"\n    In an equation for ‘it’: it = \"a\" : \"a\"\nPrelude> 'a':\"a\"\n\"aa\"\nPrelude> 'aa'\n\n<interactive>:25:1:\n    Syntax error on 'aa'\n    Perhaps you intended to use TemplateHaskell\n    In the Template Haskell quotation 'aa'\nPrelude> \"aa\"\n\"aa\"\nPrelude> \"a\"\n\"a\"\nPrelude> type \"a\"\n\n<interactive>:28:9:\n    parse error (possibly incorrect indentation or mismatched brackets)\nPrelude> a::\n\n<interactive>:29:4:\n    parse error (possibly incorrect indentation or mismatched brackets)\nPrelude> ::a\nOk, modules loaded: none.\nPrelude> :type \"a\"\n\"a\" :: [Char]\nPrelude> :type 'a'\n'a' :: Char\nPrelude> :type 1.2\n1.2 :: Fractional a => a\nPrelude> :type Pi \n\n<interactive>:1:1:\n    Not in scope: data constructor ‘Pi’\n    Perhaps you meant variable ‘pi’ (imported from Prelude)\nPrelude> :type pi\npi :: Floating a => a\nPrelude> :type 1\n1 :: Num a => a\nPrelude> :type import qualified  as \n\n<interactive>:1:1: parse error on input ‘import’\nPrelude> let a = 4\nPrelude> type a\n\n<interactive>:39:7:\n    parse error (possibly incorrect indentation or mismatched brackets)\nPrelude> let f x = x^2\nPrelude> f 2\n4\nPrelude> map f [1, 2, 3, 4]\n[1,4,9,16]\nPrelude> apply f [1]\n\n<interactive>:43:1: Not in scope: ‘apply’\nPrelude> map $f [1, 2, 3, 4, 5]\n\n<interactive>:44:8:\n    Couldn't match expected type ‘a -> b’ with actual type ‘[Integer]’\n    Relevant bindings include\n      it :: [a] -> [b] (bound at <interactive>:44:1)\n    In the first argument of ‘f’, namely ‘[1, 2, 3, 4, ....]’\n    In the second argument of ‘($)’, namely ‘f [1, 2, 3, 4, ....]’\n    In the expression: map $ f [1, 2, 3, 4, ....]\nPrelude> map f [1, 2, 3, 4, 5]\n[1,4,9,16,25]\nPrelude> reduce f[1, 2, 3, 4]\n\n<interactive>:46:1: Not in scope: ‘reduce’\nPrelude> fold\n\n<interactive>:47:1:\n    Not in scope: ‘fold’\n    Perhaps you meant one of these:\n      ‘foldl’ (imported from Prelude), ‘foldr’ (imported from Prelude)\nPrelude> fold + [1,2, 3, 4]\n\n<interactive>:48:1:\n    Not in scope: ‘fold’\n    Perhaps you meant one of these:\n      ‘foldl’ (imported from Prelude), ‘foldr’ (imported from Prelude)\nPrelude> fold (+) [1, 2, 3, 4]\n\n<interactive>:49:1:\n    Not in scope: ‘fold’\n    Perhaps you meant one of these:\n      ‘foldl’ (imported from Prelude), ‘foldr’ (imported from Prelude)\nPrelude> foldl (+) [1, 2, 3, 4]\n\n<interactive>:50:1:\n    Non type-variable argument in the constraint: Num [t]\n    (Use FlexibleContexts to permit this)\n    When checking that ‘it’ has the inferred type\n      it :: forall (t :: * -> *) t1.\n            (Num t1, Num [t1], Foldable t) =>\n            t [t1] -> [t1]\nPrelude> \"\"\n\"\"\nPrelude> \"\n\n<interactive>:52:2:\n    lexical error in string/character literal at end of input\nPrelude> \nPrelude> \nPrelude> \nPrelude> \nPrelude> \nPrelude> \nPrelude> \nPrelude> let x = \n\n<interactive>:60:9:\n    parse error (possibly incorrect indentation or mismatched brackets)\nPrelude> \nPrelude> \nPrelude> foldr (+) [1, 2, 3, 4]\n\n<interactive>:63:1:\n    Non type-variable argument in the constraint: Num [t]\n    (Use FlexibleContexts to permit this)\n    When checking that ‘it’ has the inferred type\n      it :: forall (t :: * -> *) t1.\n            (Num t1, Num [t1], Foldable t) =>\n            t [t1] -> [t1]\nPrelude> foldr f z [] = z\nPrelude> foldr f z (x:xs) = f x (foldr f z xs)\nPrelude> f\n\n<interactive>:66:1:\n    No instance for (Show (a0 -> a0))\n      (maybe you haven't applied enough arguments to a function?)\n      arising from a use of ‘print’\n    In the first argument of ‘print’, namely ‘it’\n    In a stmt of an interactive GHCi command: print it\nPrelude> f [1, 2,3, 4]\n\n<interactive>:67:1:\n    Non type-variable argument in the constraint: Num [t]\n    (Use FlexibleContexts to permit this)\n    When checking that ‘it’ has the inferred type\n      it :: forall t. (Num t, Num [t]) => [t]\nPrelude> ",
 			"settings":
 			{
-				"buffer_size": 444,
-				"line_ending": "Unix"
+				"buffer_size": 7177,
+				"line_ending": "Unix",
+				"name": "*REPL* [haskell]",
+				"scratch": true
 			}
 		},
 		{
-			"file": "/Users/fergusbarratt/.cabal/where-is-my-stuff.txt",
+			"file": "hello.scm",
 			"settings":
 			{
-				"buffer_size": 717,
-				"line_ending": "Unix"
+				"buffer_size": 47,
+				"line_ending": "Unix",
+				"name": "(begin"
 			}
 		},
 		{
-			"file": "/Library/Frameworks/GHC.framework/Versions/7.10.2-x86_64/usr/bin/ghc",
+			"file": "/Users/fergusbarratt/.bash_profile",
 			"settings":
 			{
-				"buffer_size": 464,
+				"buffer_size": 1903,
 				"line_ending": "Unix"
 			}
 		}
@@ -335,17 +342,29 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 160.0,
-		"last_filter": "haskell",
+		"height": 354.0,
+		"last_filter": "install",
 		"selected_items":
 		[
 			[
-				"haskell",
-				"Set Syntax: Haskell"
-			],
-			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"scheme",
+				"SublimeREPL: Scheme"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"haskell",
+				"Set Syntax: Haskell"
 			],
 			[
 				"packages",
@@ -617,13 +636,19 @@
 	],
 	"file_history":
 	[
+		"/Users/fergusbarratt/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/fergusbarratt/Library/Application Support/Sublime Text 3/Packages/User/SublimeHaskell.sublime-settings",
+		"/Users/fergusbarratt/Library/Application Support/Sublime Text 3/Packages/SublimeHaskell/Settings/SublimeHaskell.sublime-settings",
+		"/Users/fergusbarratt/.cabal/where-is-my-stuff.txt",
+		"/Library/Frameworks/GHC.framework/Versions/7.10.2-x86_64/usr/bin/ghc",
+		"/Users/fergusbarratt/Dropbox/WriteScheme/README.md",
+		"/Users/fergusbarratt/Dropbox/WriteScheme/.gitignore",
+		"/Users/fergusbarratt/.gitignore_global",
 		"/Users/fergusbarratt/.gitconfig",
 		"/Users/fergusbarratt/.bash_profile",
 		"/Users/fergusbarratt/.bash_pr",
 		"/Users/fergusbarratt/.cabal/config",
 		"/etc/hosts",
-		"/Library/Frameworks/GHC.framework/Versions/7.10.2-x86_64/usr/bin/ghc",
-		"/Users/fergusbarratt/Library/Application Support/Sublime Text 3/Packages/SublimeHaskell/Settings/SublimeHaskell.sublime-settings",
 		"/Users/fergusbarratt/Dropbox/RubyProject/flashcards/app/views/flashcards/index.html.erb",
 		"/Users/fergusbarratt/Dropbox/RubyProject/flashcards/app/views/flashcards/show.html.erb",
 		"/Users/fergusbarratt/Dropbox/RubyProject/flashcards/app/views/flashcards/new.html.erb",
@@ -632,7 +657,6 @@
 		"/Users/fergusbarratt/Dropbox/RubyProject/flashcards/db/migrate/20151111202007_add_password_digest_to_users.rb",
 		"/Users/fergusbarratt/Dropbox/RubyProject/flashcards/app/views/users/show.html.erb",
 		"/Users/fergusbarratt/Dropbox/RubyProject/flashcards/app/controllers/flashcards_controller.rb",
-		"/Users/fergusbarratt/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/fergusbarratt/Dropbox/RubyProject/flashcards/app/views/flashcards/edit.html.erb",
 		"/Users/fergusbarratt/Dropbox/RubyProject/flashcards/app/views/flashcards/_form.html.erb",
 		"/Users/fergusbarratt/Dropbox/RubyProject/flashcards/app/views/layouts/_footer.html.erb",
@@ -739,12 +763,7 @@
 		"/Users/fergusbarratt/Library/Application Support/Sublime Text 2/Packages/SublimeREPL/config/Python/Main.sublime-menu",
 		"/Users/fergusbarratt/Library/Application Support/Sublime Text 2/Packages/python3.sublime-build",
 		"/Users/fergusbarratt/Dropbox/University/Masters project/Mathematica/NeoclassicalDecay.m",
-		"/Users/fergusbarratt/Dropbox/University/Masters project/Mathematica/NeoclassicalDecay.nb",
-		"/Users/fergusbarratt/Dropbox/University/Masters project/Mathematica/Script.m",
-		"/Users/fergusbarratt/Dropbox/University/Masters project/TeX/Literature Review/TitlePage.tex",
-		"/Users/fergusbarratt/Dropbox/University/Masters project/TeX/Literature Review/ProjectOutline.tex",
-		"/Users/fergusbarratt/Dropbox/University/Masters project/Mathematica/QuasiProbabilityFunctions.m",
-		"/Users/fergusbarratt/Dropbox/University/Masters project/Mathematica/Quasi Probability Functions.nb"
+		"/Users/fergusbarratt/Dropbox/University/Masters project/Mathematica/NeoclassicalDecay.nb"
 	],
 	"find":
 	{
@@ -852,7 +871,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -861,110 +880,141 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 676,
+						"buffer_size": 998,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								472,
-								472
+								834,
+								834
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SublimeHaskell/Syntaxes/Haskell-SublimeHaskell.tmLanguage"
+							"syntax": "Packages/SublimeHaskell/Syntaxes/Haskell-SublimeHaskell.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 423.0,
+						"translation.y": 251.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/Users/fergusbarratt/.gitignore_global",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 444,
+						"buffer_size": 7177,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								444,
-								444
+								7177,
+								7177
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"auto_complete": true,
+							"auto_indent": false,
+							"default_dir": "/Users/fergusbarratt/Dropbox/WriteScheme",
+							"detect_indentation": false,
+							"gutter": false,
+							"history_arrows": true,
+							"indent_subsequent_lines": false,
+							"line_numbers": false,
+							"repl": true,
+							"repl_external_id": "haskell",
+							"repl_id": "a1126994bf2b4ac1b2c830bb4d9553b3",
+							"repl_restart_args":
+							{
+								"cmd":
+								[
+									"ghci"
+								],
+								"cwd": "$file_path",
+								"encoding": "utf8",
+								"external_id": "haskell",
+								"syntax": "Packages/Haskell/Haskell.tmLanguage",
+								"type": "sublime_haskell"
+							},
+							"repl_sublime2": false,
+							"smart_indent": false,
+							"spell_check": false,
+							"syntax": "Packages/Haskell/Haskell.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/fergusbarratt/.cabal/where-is-my-stuff.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 717,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								217,
-								217
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 73.0,
+						"translation.y": 4745.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/Library/Frameworks/GHC.framework/Versions/7.10.2-x86_64/usr/bin/ghc",
+					"buffer": 2,
+					"file": "hello.scm",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 464,
+						"buffer_size": 47,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								47,
+								47
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+							"auto_name": "(begin",
+							"syntax": "Packages/Lisp/Lisp.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/fergusbarratt/.bash_profile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1502,
+								1502
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 431.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1028,6 +1078,10 @@
 	"output.git-remote":
 	{
 		"height": 98.0
+	},
+	"output.haskell_error_checker":
+	{
+		"height": 115.0
 	},
 	"output.haskell_sublime_load":
 	{
