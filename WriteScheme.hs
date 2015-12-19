@@ -10,15 +10,15 @@ data LispVal = Atom String
   | String String
   | Bool Bool
 
-symbol::Parser Char
+symbol :: Parser Char
 symbol = oneOf "!#$%&|*+_?:<=>?@^_~"
 
-readExpr::String->String
+readExpr :: String -> String
 readExpr input = case parse parseExpr "lisp" input of 
   Left err -> "No match: " ++ show err
   Right val -> "Found value"
 
-spaces::Parser ()
+spaces :: Parser ()
 spaces = skipMany1 space
 
 parseString :: Parser LispVal
